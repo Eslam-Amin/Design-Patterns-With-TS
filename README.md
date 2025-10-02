@@ -70,7 +70,7 @@ console.log(instance2.getData()); // "It's the same"
 
 ---
 
-### **2. Factory Pattern**
+### **2- Factory Pattern**
 
 **Description**
 Provides an interface for creating objects, letting subclasses decide which class to instantiate.
