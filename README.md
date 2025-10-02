@@ -4,11 +4,11 @@
 
 ### Creational Patterns
 
-- [1. Singleton Pattern](#1--singleton-pattern)
-- [2. Factory Pattern](#2--factory-pattern)
-- [3. Abstract Factory Pattern](#3--abstract-factory-pattern)
-- [4. Builder Pattern](#4--builder-pattern)
-- [5. Prototype Pattern](#5--prototype-pattern)
+- [1. Singleton Pattern](#1. Singleton Pattern)
+- [2. Factory Pattern](#2. Factory Pattern)
+- [3. Abstract Factory Pattern](#3. Abstract Factory Pattern)
+- [4. Builder Pattern](#4. Builder Pattern)
+- [5. Prototype Pattern](#5. Prototype Pattern)
 
 ---
 
@@ -20,7 +20,7 @@ Creational design patterns provide various object creation mechanisms, which inc
 
 ### **1. Singleton Pattern**
 
-📖 **Description**
+**Description**
 Ensures a class has only one instance and provides a global access point to it.
 
 **Pros**
@@ -72,7 +72,7 @@ console.log(instance2.getData()); // "It's the same"
 
 ### **2. Factory Pattern**
 
-📖 **Description**
+**Description**
 Provides an interface for creating objects, letting subclasses decide which class to instantiate.
 
 **Pros**
@@ -120,7 +120,7 @@ console.log(myCar.type); // "Car"
 
 ### **3. Abstract Factory Pattern**
 
-📖 **Description**
+**Description**
 Provides an interface for creating families of related objects without specifying concrete classes.
 
 **Pros**
@@ -187,7 +187,7 @@ console.log(myCar.create()); // "Car created"
 
 ### **4. Builder Pattern**
 
-📖 **Description**
+**Description**
 Separates object construction from its representation.
 
 **Pros**
@@ -238,7 +238,7 @@ console.log(car); // { engine: "V8", wheels: 4 }
 
 ### **5. Prototype Pattern**
 
-📖 **Description**
+**Description**
 Creates new objects by cloning existing ones (a prototype).
 
 **Pros**
