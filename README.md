@@ -4,7 +4,7 @@
 
 ### Creational Patterns
 
-- [1. Singleton Pattern](#1. Singleton Pattern)
+- [1. Singleton Pattern](#1--Singleton Pattern)
 - [2. Factory Pattern](#2. Factory Pattern)
 - [3. Abstract Factory Pattern](#3. Abstract Factory Pattern)
 - [4. Builder Pattern](#4. Builder Pattern)
@@ -18,7 +18,7 @@ Creational design patterns provide various object creation mechanisms, which inc
 
 ---
 
-### **1. Singleton Pattern**
+### **1--Singleton Pattern**
 
 **Description**
 Ensures a class has only one instance and provides a global access point to it.
