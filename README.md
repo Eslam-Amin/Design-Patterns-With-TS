@@ -118,7 +118,7 @@ console.log(myCar.type); // "Car"
 
 ---
 
-### **3. Abstract Factory Pattern**
+### **3- Abstract Factory Pattern**
 
 **Description**
 Provides an interface for creating families of related objects without specifying concrete classes.
@@ -185,7 +185,7 @@ console.log(myCar.create()); // "Car created"
 
 ---
 
-### **4. Builder Pattern**
+### **4- Builder Pattern**
 
 **Description**
 Separates object construction from its representation.
@@ -236,7 +236,7 @@ console.log(car); // { engine: "V8", wheels: 4 }
 
 ---
 
-### **5. Prototype Pattern**
+### **5- Prototype Pattern**
 
 **Description**
 Creates new objects by cloning existing ones (a prototype).
