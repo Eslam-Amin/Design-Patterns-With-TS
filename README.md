@@ -10,6 +10,10 @@
 - [4. Builder Pattern](#4--builder-pattern)
 - [5. Prototype Pattern](#5--prototype-pattern)
 
+### Structural Patterns
+
+- [1. Adapter Pattern](#1--adapter-pattern)
+
 ---
 
 ## **Creational Patterns**
@@ -271,6 +275,59 @@ car.type = "Car";
 
 console.log(car.getType()); // "Car"
 console.log(vehiclePrototype.getType()); // "Vehicle"
+```
+
+---
+
+## **Structural Design Patterns**
+
+Structural patterns explain how to **assemble objects and classes into larger structures**, while keeping these structures flexible and efficient.
+
+---
+
+### **1- Adapter Pattern**
+
+**Description**:
+Allows incompatible interfaces to work together. Converts one interface into another expected by the client.
+
+**Pros**:
+
+- Increases reusability of existing classes
+- Decouples client from concrete implementations
+
+**Cons**:
+
+- Adds extra complexity
+- Might reduce performance if overused
+
+```ts
+// Adapter.ts
+interface Target {
+  request(): string;
+}
+
+class Adaptee {
+  specificRequest(): string {
+    return "Specific request from Adaptee";
+  }
+}
+
+class Adapter implements Target {
+  private adaptee: Adaptee;
+
+  constructor(adaptee: Adaptee) {
+    this.adaptee = adaptee;
+  }
+
+  request(): string {
+    return `Adapter: ${this.adaptee.specificRequest()}`;
+  }
+}
+
+// Usage
+const adaptee = new Adaptee();
+const target: Target = new Adapter(adaptee);
+console.log(target.request());
 ```
 
 ---
