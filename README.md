@@ -13,6 +13,7 @@
 ### Structural Patterns
 
 - [1. Adapter Pattern](#1--adapter-pattern)
+- [2. Bridge Pattern](#2--bridge-pattern)
 
 ---
 
@@ -328,6 +329,65 @@ class Adapter implements Target {
 const adaptee = new Adaptee();
 const target: Target = new Adapter(adaptee);
 console.log(target.request());
+```
+
+---
+
+### **2- Bridge Pattern**
+
+**Description**:
+Decouples abstraction from its implementation, so both can vary independently.
+
+**Pros**:
+
+- Improves extensibility (add abstractions & implementations independently)
+- Avoids permanent binding between abstraction and implementation
+
+  \*Cons\*\*:
+
+- Increases design complexity
+- Requires upfront design effort
+
+```ts
+// Bridge.ts
+interface Device {
+  enable(): void;
+  disable(): void;
+  isEnabled(): boolean;
+}
+
+class TV implements Device {
+  private on = false;
+  enable() {
+    this.on = true;
+    console.log("TV on");
+  }
+  disable() {
+    this.on = false;
+    console.log("TV off");
+  }
+  isEnabled() {
+    return this.on;
+  }
+}
+
+class Remote {
+  constructor(protected device: Device) {}
+
+  togglePower() {
+    if (this.device.isEnabled()) {
+      this.device.disable();
+    } else {
+      this.device.enable();
+    }
+  }
+}
+
+// Usage
+const tv = new TV();
+const remote = new Remote(tv);
+remote.togglePower(); // TV on
+remote.togglePower(); // TV off
 ```
 
 ---
